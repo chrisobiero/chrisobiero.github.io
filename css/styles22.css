@@ -1,0 +1,230 @@
+/* CSS Document */
+/* Reset */
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+--------------------------------------------------------------------------------------------------------------- */
+
+a{color:#55ABDA;}
+
+hr, .borderedbox{border-color:#D7D7D7;}
+
+label span{color:#FF0000; background-color:inherit;}
+
+.rounded{color:inherit; 
+		 background-color:#CFF;}
+#cover{width: 900px; margin: auto;}
+body{ background-image:url(../images/sdp.jpg);}
+.image-frame1 {border-radius:150px;}
+.image-frame2 {border-radius:250px;
+               position:absolute;
+			   width:0px;
+			   -Webkit-transition:width 1.5s linear 0s;
+			   transition:width 1.5s linear 0s;
+			   z-index:10;
+			   opacity:0.5;
+			   filter:alpha(opacity=170);/*IEB earlier*/}
+.image-frame1:hover + .image-frame2{ width:100px;}
+
+.social-icon{border-radius:150px;
+             
+             -webkit-transition: -webkit-transform 0.3s ease-out;
+			 -moz-transition: -webkit-transform 0.3s ease-out;
+			 -transition:-transform 0.3s ease-out;}
+.social-link:hover .social-icon{-webkite-transform:rotate(180deg);
+                   -moz-transform:rotate(180deg);
+				   -transform:rotate(180deg);}
+			 
+
+.back{border-radius:15px;}
+.front{border-radius:15px;}
+.image-frame{padding:10px; margin:10px; border:#999999 1px  solid;}
+
+.net{ color:#000000;}
+#social{text-align:right; font-color:#060;}
+#social li{display:inline; margin-right:3px; padding-right:8px;}
+
+
+
+
+h1{ text-align:left;
+    font-size:15px;
+	color:#000000; 
+	 }
+h2{text-align:center;
+    font-size:12px;
+	padding-bottom:5px;
+	color:#000000;}
+	
+	 
+.flip3D{ width:150px; height:100px; margin-left:50px; margine-right:50px; padding-top:10px;  float:left;}
+.flip3D>.front{ position:absolute;
+                -webkit-transform:perspective(600px) rotateY(0deg); 
+                transform:perspective(600px) rotateY(0deg);
+				background-image:border-radius:7px; 
+				backface-visibility:hidden;
+				transition:transform 1.5s linear 0s;
+				}
+.flip3D>.back{ position:absolute;
+                -webkit-transform:perspective(600px) rotateY(180deg); 
+                transform:perspective(600px) rotateY(180deg);
+				backface-visibility:hidden;
+				transition:transform  1.5s linear 0s;
+				}
+.flip3D:hover>.front{transform:perspective(600px) rotateY(-180deg);
+                     -webkit-transform:perspective(600px) rotateY(180deg);
+					  }
+.flip3D:hover>.back{transform:perspective(600px) rotateY(0deg);
+                     -webkit-transform:perspective(600px) rotateY(0deg);
+					  }
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2, .row2 a{}
+.row3, .row3 a{}
+.row4, .row4 a{}
+.row5, .row5 a{}
+/* Rows */
+.row0, .row0 a{color:#F9F9F9;}
+.row1{color:#0C0; }
+.row1 a{color:#F9F9F9;background-color:inherit; }
+.row2, .row2 a{color:#06213F; background-color:inherit;}
+.row3{color:#979797; background-color:inherit;}
+.row4{color:#979797; background-color:inherit;}
+.row5, .row5 a{color:trasparent; background-color:transparent;}
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:10px 0 0 0; text-align:right; font-size:.8em;}
+
+#topbar li{display:inline; margin-right:3px; padding-right:8px;}
+#topbar li:last-child{margin-right:0; padding-right:0; border:none;}
+/* Tables
+--------------------------------------------------------------------------------------------------------------- */
+table, th, td{border:1px solid; border-collapse:collapse; vertical-align:top; box-sizing:border-box;}
+table, th{table-layout:auto;}
+table{width:100%; margin-bottom:15px;}
+th, td{padding:5px 8px;}
+td{border-width:0 1px;}
+/* Tables + Comments */
+table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
+th{color:#FFFFFF; background-color:#373737;}
+tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
+tr:nth-child(odd), #comments li:nth-child(odd){color:inherit; background-color:#FFFFFF;}
+table a, #comments a{background-color:inherit;}
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; font-weight:bold; line-height:10px;}
+/* Navigation */
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#B56A6A; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FF8A15; background-color:#B56A6A;}
+#mainav form select{border-color:#D7D7D7;}
+/* Top Navigation */
+#mainav{text-align:center; text-transform:uppercase; }
+#mainav ul{}
+#mainav ul ul{z-index:9999; position:absolute; width:160px;}
+#mainav ul ul ul{left:160px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 30px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0; text-align:left; text-transform:none;}
+#mainav li a{display:block; padding:0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav li li:last-child a{border-bottom:none;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:5px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{display:none;}
+#mainav ul li:hover > ul{display:block;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:1px solid;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+/* Rounded Corners
+--------------------------------------------------------------------------------------------------------------- */
+.rounded, input, button, textarea, #header input, #footer input, #slide-wrapper figcaption, .avatar, #comments li, .faico a, #twitter, 
+.pagination a, .pagination strong{border-radius:8px;}
+#mainav li li:last-child a{border-radius:0 0 8px 8px;}
+#mainav li li:first-child a, #slide-wrapper figure img, #slide-wrapper figure .view:hover::before{border-radius:8px 8px 0 0;}
+
+html{overflow-y:scroll;}
+body{margin:0; padding:0; font-size:14px; line-height:1.4em;}
+
+.clear, .group{display:block;}
+.clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}
+.clear, .clear::after, .group, .group::after{clear:both;}
+
+ a{outline:none; text-decoration:none;}
+
+/* Fonts
+--------------------------------------------------------------------------------------------------------------- */
+body, h1, h2, h3,.heading{font-family:Georgia, "Times New Roman", Times, serif;}
+
+/* Generalise
+--------------------------------------------------------------------------------------------------------------- */
+.wrapper{display:block; margin:0 auto 20px; text-align:left; word-wrap:break-word;}
+.rounded, #topbar, #header, #mainav, #slider, .container, #footer, #copyright{display:block; width:100%; box-sizing:border-box;}
+.rounded{margin:0; padding:20px;}
+
+
+
+
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:0px;}
+
+#footer .faico{margin-bottom:10px;}
+#footer .faico li{margin:0 10px 0 0;}
+#footer .faico li:last-child{margin-right:0;}
+#footer .faico a{border:1px solid;}
+
+#footer form{display:block; position:relative; width:100%;}
+#footer legend{display:block; width:100%; margin-bottom:10px;};
+#footer input, #footer button{display:block; height:30px; border:none;}
+#footer input{width:100%; min-width:250px; padding:5px 5px 5px 5px;}
+#footer button{position:absolute; bottom:0; right:0; width:35px; font-size:16px; cursor:pointer;}
+#footer button em{display:none;}
+/* Footer */
+#footer .faico a{box-shadow:2px 2px 0 0 rgba(0,0,0,.5); border-color:rgba(0,0,0,.2);}
+
+#footer input{color:#FFFFFF; background-color:#979797;}
+#footer button{color:#F9F9F9; background-color:#55ABDA;}
+#address{ float:right;}
+
+.center{text-align:center;}
+.clear, .group{display:block;}
+.clear::before, .clear::after, .group::before, .group::after{display:table; content:"";}
+.clear, .clear::after, .group, .group::after{clear:both;}
+.first{margin-left:opx;float:left;}
+
+
+
+/* Spacing
+--------------------------------------------------------------------------------------------------------------- */
+.btmspace-10{margin-bottom:0px;}
+.btmspace-15{margin-bottom:0px;}
+.btmspace-30{margin-bottom:0px;}
+.btmspace-50{margin-bottom:0px;}
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{}
+#copyright p{margin:0; padding:0;}
+.fl_left{ color:#FFFFFF;}
+.fl_left:hover>a{color:#F00;}
+
+
+
+
+
+
